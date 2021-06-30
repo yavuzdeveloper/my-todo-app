@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
-import AddTodo from './AddForm';
+import AddTodoForm from './AddTodoForm';
 
 class App extends Component {
   state = {
-    todos:[]
+    todos: []
   }
 
   deleteTodo = (id) => {
@@ -29,9 +29,10 @@ class App extends Component {
   render(){
     return (
       <div className="App container">
-        <h1 className="center blue-text">Todo List</h1>
+        <h1 className="center blue-text">my-todo-app</h1>
+        <h3 className="center blue-text">Todo List</h3>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
-        <AddTodo addTodo={this.addTodo} />
+        <AddTodoForm addTodo={this.addTodo} />
       </div>
     );
   }
